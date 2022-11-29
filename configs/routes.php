@@ -16,11 +16,11 @@ switch(ROUTE){
     break;
 
     //Acces page d'ajout de véhicules
-    case '/fruits/ajouter-vehicule/';
+    case '/vehicles/ajouter-vehicule/';
         $mainController->newVehicle();
     break;
 
-    
+
 
     // Si aucune des URL précédents ne match, c'est la page 404 qui sera appelée par défaut
     default:

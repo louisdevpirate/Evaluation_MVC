@@ -54,16 +54,11 @@ class MainController{
 
                 $newVehicle = new Vehicle();
 
-                $convertedPrice = str_replace(',', '.', $_POST['price']);
-
-
-                $newFruit
-                    ->setName( $_POST['name'])
+                $newVehicle
+                    ->setBrand( $_POST['brand'])
+                    ->setModel( $_POST['model'])
                     ->setColor( $_POST['color'])
-                    ->setOrigin( $_POST['origin'])
-                    ->setPricePerKilo( $convertedPrice )
-                    ->setDescription( $_POST['description'])
-                    ->setAuthor( $_SESSION['user'])
+                    ->setRegistration( $_POST['registration'])
                 ;
 
                 $fruitManager = new FruitManager();
@@ -78,9 +73,9 @@ class MainController{
 
         }
 
-        //Charge la vue "new-fruit.php" dans "views"
+        //Charge la vue "add-vehicles.php" dans "views"
 
-        include VIEWS_DIR . '/add-fruit.php';
+        include VIEWS_DIR . '/add_vehicles.php';
 
     }
 
