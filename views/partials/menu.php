@@ -20,6 +20,12 @@
                 <a class="nav-link<?= ROUTE == '/vehicles/ajouter-vehicule/' ? ' active' : '' ?>" href="<?= PUBLIC_PATH ?>/vehicles/ajouter-vehicule/">Véhicules</a>
                 </li>
 
+                <!--Bouton liste de véhicule-->
+                <li class="nav-item">
+                <a class="nav-link<?= ROUTE == '/vehicles/liste/' ? ' active' : '' ?>" href="<?= PUBLIC_PATH ?>/vehicles/liste/">Liste des Véhicules</a>
+                </li>
+
+
             </ul>
         </div>
     </div>

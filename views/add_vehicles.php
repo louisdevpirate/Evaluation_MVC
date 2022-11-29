@@ -17,7 +17,7 @@
         <!-- Titre H1 -->
         <div class="row my-5">
 
-            <h1 class="col-12 text-center">Ajouter un véhicule</h1>
+            <h1 class="col-12 text-center">Véhicules</h1>
 
         </div>
 
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <input type="submit" class="col-12 btn btn-success">
+                        <input type="submit" value="Ajouter ce véhicule" class="col-12 btn btn-success">
                     </div>
 
                 </form>

@@ -80,6 +80,75 @@ class MainController{
 
     }
 
+    /**
+     * Controlleur page de liste de véhicules
+     */
+    public function vehicleList(): void
+    {
+
+        $vehicleManager = new VehicleManager();
+
+        $vehicles = $vehicleManager->findAll();
+
+
+        //Charge la vue "vehiclelist.php" dans "views"
+        include VIEWS_DIR . '/vehiclelist.php';
+        
+
+    }
+
+    public function vehicleDelete(): void
+    {
+        if(!isset($_GET['id'])){
+            $this->page404();
+            die();
+        }
+
+        $vehicleManager = new VehicleManager();
+
+        $vehicleToDelete = $vehicleManager->findOneBy('id', $_GET['id']);
+
+        if(!isset($vehicleToDelete)){
+            $this->page404();
+            die();
+        }
+
+        $vehicleManager->delete($vehicleToDelete);
+
+        //Charge la vue "delete_vehicle.php" dans "views"
+        include VIEWS_DIR . '/delete_vehicle.php';
+        
+
+    }
+
+
+    /**
+     * Controlleur page de fiche des véhciules
+     */
+    public function vehicleForm(): void
+    {   
+
+        if(!isset($_GET['id'])){
+            $this->page404();
+            die();
+        }
+
+        $vehicleManager = new VehicleManager();
+
+        $vehicle = $vehicleManager->findOneBy('id', $_GET['id']);
+
+        if(empty($vehicle)){
+            $this->page404();
+            die();
+        }
+
+
+        //Charge la vue "fruitform.php" dans "views"
+        include VIEWS_DIR . '/vehicleform.php';
+        
+
+    }
+
 
     /**
      * Contrôleur de la page 404

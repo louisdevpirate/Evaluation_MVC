@@ -22,9 +22,9 @@
         <!-- Contenu de la page -->
         <div class="row">
 
-            <div class="col-12 d-flex justify-content-center flex-wrap home-vehicles">
+            <div class="col-12 justify-content-center home-vehicles">
                 <h1>Infos</h1>
-
+<br>
                 <p>Vous avez actuellement véhicules enregistrés dans la base de données</p>
             </div>
 

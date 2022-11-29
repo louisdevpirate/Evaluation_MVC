@@ -25,6 +25,11 @@ switch(ROUTE){
         $mainController->vehicleList();
     break;
 
+    //Acces page de fiche des véhicules
+    case '/vehicles/fiche/';
+        $mainController->vehicleForm();
+    break;
+
     //Acces page de suppression des véhicules
     case '/vehicles/supprimer/';
         $mainController->vehicleDelete();
