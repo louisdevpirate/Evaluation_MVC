@@ -2,7 +2,8 @@
 
 namespace Controllers;
 
-
+use Models\DTO\Vehicle;
+use Models\DAO\VehicleManager;
 
 class MainController{
 
@@ -61,11 +62,11 @@ class MainController{
                     ->setRegistration( $_POST['registration'])
                 ;
 
-                $fruitManager = new FruitManager();
+                $vehicleManager = new VehicleManager();
 
-                $fruitManager->save( $newFruit );
+                $vehicleManager->save( $newVehicle );
 
-                $success = 'Le fruit à bien été ajouté!';
+                $success = 'Le véhicule à bien été ajouté!';
                 
             }
 

@@ -20,6 +20,21 @@ switch(ROUTE){
         $mainController->newVehicle();
     break;
 
+    //Acces page de vue des véhicules
+    case '/vehicles/liste/';
+        $mainController->vehicleList();
+    break;
+
+    //Acces page de suppression des véhicules
+    case '/vehicles/supprimer/';
+        $mainController->vehicleDelete();
+    break;
+
+    //Acces page de modification des véhicules
+    case '/vehicles/modifier/';
+        $mainController->vehicleUpdate();
+    break;
+
 
 
     // Si aucune des URL précédents ne match, c'est la page 404 qui sera appelée par défaut

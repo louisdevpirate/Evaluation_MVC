@@ -39,7 +39,7 @@ class VehicleManager{
         ]);
 
         //Fermeture de la requête
-        $createFruit->closeCursor();
+        $createVehicle->closeCursor();
 
     }
 
